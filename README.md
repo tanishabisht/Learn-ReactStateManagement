@@ -64,7 +64,7 @@ React Query provides tools for managing state with asynchronous data from REST A
 This project is part of a comprehensive React learning series:
 1. [React Application for User Listing](https://github.com/tanishabisht/Learn-ReactUsersListing)
 2. [Hooks in React](https://github.com/tanishabisht/Learn-ReactHooks)
-3. [State Management in React](https://github.com/tanishabisht/Learn-ReactStateManagement)
+3. [State Management in React](https://github.com/tanishabisht/Learn-ReactStateManagement) (this repository)
 4. [Material-UI in React](https://github.com/tanishabisht/Learn-ReactMUI)
 5. [Redux in React](https://github.com/tanishabisht/Learn-ReactRedux)
 6. [Optimizing React Apps](https://github.com/tanishabisht/Learn-ReactOptimization)
