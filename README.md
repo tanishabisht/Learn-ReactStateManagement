@@ -1,9 +1,55 @@
-# State Management in ReactJS
-When I am building a React app using hooks:
-1. locally: useState()
-2. Passing from parent to child: using props
-3. Globally: useContext()
-4. Rest APIs: useQuery(), usePaginatedQuery()
+# Learn - React State Management
+
+This is the third installment of a seven-part series designed to improve your React development skills. This project focuses on various methods for managing state in React applications.
+
+
+
+## Getting Started with the Application
+Follow these instructions to get the application running:
+1. Install Node.js version 14.21.3:
+   - `nvm install v14.21.3`
+   - `nvm use v14.21.3`
+2. Install necessary packages:
+   - `npm install`
+3. Start the application:
+   - `npm start`
+
+
+
+## State management
+
+When building a React app using hooks, you can manage state:
+1. Locally: `useState()`
+2. Between parent and child: `props`
+3. Globally: `useContext()`
+4. With REST APIs: `useQuery()`, `usePaginatedQuery()`
+
+**GOAL:** Try to keep state management as simple as possible
+
+1. **Local State**: Use the `useState()` hook locally within functional components.
+
+2. **Lifting State**: This is the process of moving local state up one level in the hierarchy to share state and its setter function as props.
+
+<p><img src='./props.JPG' width='400'></p>
+
+3. **Global State (with Contexts)**: Use this when you have multiple levels and refactoring becomes complex. Be aware that changing the state with `useContext()` can cause all components that use that context to re-render.
+
+4. Consider memoizing components to prevent unnecessary re-renders.
+
+Once you use global state, you might consider other libraries like MobX, Redux, Overmind, Zustand, or Recoil, or simply stick with `useState()`.
+
+
+
+## External Data
+Managing external data states (loading, errors, data updates, and caching) can be complex. Some libraries that simplify this are:
+1. React Query, SWR (for REST APIs)
+2. Apollo Client, Urql (for GraphQL)
+
+### React Query
+React Query provides tools for managing state with asynchronous data from REST APIs or GraphQL. It helps by:
+1. Caching data after the initial fetch, improving speed and user experience.
+2. Re-fetching data in the background to keep the site up-to-date.
+3. Providing information about the request, such as status or errors.
 
 
 
@@ -14,44 +60,12 @@ When I am building a React app using hooks:
 
 
 
-## App state
-Keep state as low as possible.
-
-1. **Local State** ... `useState() hook` is used inside the functional component locally
-
-2. **Lift state** ... process when the local state comes one level above its original in the hierarchy ... to send in states and its setter function as props
-
-<p style="text-align:center;"><img src='./props.JPG' width='400'></p>
-
-3. **Global State (with contexts)** ... use this when the number of levels is n-level and you dont know how many ... it will get hard to re-factor
-
-**The problem with useContext()**
-Is that when you change the state, then all the components that uses that context is re-rendered.
-
-4. On memoising a component it wont have unnecessary rerenders
-
-Once you are uding global state, you're welcome to use MobX, Redux, Overmind, Zustand, Recoil, etc... or just stick with `useState()`.
-
-
-
-## External Data
-
-Dont like to save it in state and manage it myself, cause there is a lot to do like loading states, error states, the actual data you have loaded, when do u trigger updates to that state, caching issues, etc.
-
-Some good libraries that have done all this for us:
-1. React Query, SWR (when dealing with rest APIs)
-2. Apollo Client, Urql (when dealing with graphQL)
-
-
-
-## React Query
-
-Gives tools for state management for asynchronous data that we might use, that may be from REST API, GraphQL
-
-Does this by providing a custom hook in react called useQuery() and that manages lot of stuff under the hood for us like:
-
-1. Caching the data after the initial fetch, which will speed up the process and give us better user experience
-
-2. Re-fetching data in the background, so our site is always in sync with the data
-
-3. Also gives us access to information of the request that we make like its status or any errors
+## React Learning Series
+This project is part of a comprehensive React learning series:
+1. [React Application for User Listing](https://github.com/tanishabisht/Learn-ReactUsersListing)
+2. [Hooks in React](https://github.com/tanishabisht/Learn-ReactHooks)
+3. [State Management in React](https://github.com/tanishabisht/Learn-ReactStateManagement)
+4. [Material-UI in React](https://github.com/tanishabisht/Learn-ReactMUI)
+5. [Redux in React](https://github.com/tanishabisht/Learn-ReactRedux)
+6. [Optimizing React Apps](https://github.com/tanishabisht/Learn-ReactOptimization)
+7. [Building a Burger Builder App in React](https://github.com/tanishabisht/Learn-ReactBurgerBuilder)
